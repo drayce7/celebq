@@ -1,0 +1,1303 @@
+/* =========================================================
+   Ultimate Banner Studio — 12 designs
+   ========================================================= */
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  /* shared palette */
+  --cream:#fdf6e8;
+  --cream-2:#f5ead3;
+  --ink:#141014;
+  --gold:#c9a227;
+  --gold-dk:#8a6d12;
+  --pink:#ff2d78;
+  --blue:#2d5bff;
+  --terra:#c6553a;
+  --orange:#e85d2a;
+  --forest:#1e4d2b;
+  --wine:#5a1220;
+  --oxblood:#7a1f2b;
+  --navy:#12224a;
+  --mustard:#d99b1c;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#d9d0bc;
+  color:var(--ink);
+  padding-bottom:60px;
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+.topbar{
+  position:sticky;top:0;z-index:80;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 22px;
+  background:rgba(14,12,10,.95);
+  backdrop-filter:blur(12px);
+  color:var(--cream);
+}
+.topbar .brand{
+  font-family:'Bodoni Moda',serif;font-weight:900;font-size:1.15rem;
+  color:var(--gold);letter-spacing:1px;
+}
+.topbar-actions{display:flex;gap:10px;}
+
+.btn{
+  border:none;cursor:pointer;font-family:'Inter',sans-serif;
+  font-weight:700;font-size:.85rem;letter-spacing:.3px;
+  padding:10px 18px;border-radius:999px;transition:.2s;
+}
+.btn-save{background:var(--cream);color:var(--ink);}
+.btn-reset-top{background:rgba(255,255,255,.12);color:var(--cream);}
+.btn-apply{background:#00a37a;color:#fff;padding:13px 22px;border-radius:10px;width:100%;margin:0;font-size:.9rem;}
+.btn-edit-sm{
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  color:#fff;font-size:.78rem;padding:8px 16px;
+}
+.btn-dl-sm{
+  background:var(--ink);color:var(--cream);
+  font-size:.78rem;padding:8px 16px;
+}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08);}
+
+/* =========================================================
+   GROUP HEADINGS
+   ========================================================= */
+.group-heading{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:1.5rem;letter-spacing:1px;
+  max-width:1150px;margin:60px auto 10px;padding:0 16px;
+  color:var(--ink);
+  border-bottom:2px solid var(--ink);
+  padding-bottom:10px;
+}
+.group-heading:first-of-type{margin-top:36px;}
+
+/* =========================================================
+   BANNER WRAP + META
+   ========================================================= */
+.banner-wrap{
+  max-width:1150px;margin:32px auto;padding:0 16px;
+}
+.banner-meta{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:12px;margin-bottom:14px;flex-wrap:wrap;
+}
+.banner-meta h2{
+  font-family:'Bodoni Moda',serif;font-size:1.2rem;
+}
+.banner-meta .sub{
+  font-size:.75rem;color:#888;margin-top:2px;letter-spacing:.4px;
+}
+.meta-actions{display:flex;gap:8px;}
+
+.preview{
+  display:flex;justify-content:center;
+  background:#fff;border-radius:20px;padding:18px;
+  box-shadow:0 14px 40px rgba(0,0,0,.1);
+}
+
+.banner{position:relative;overflow:hidden;color:var(--ink);}
+.img{
+  background:linear-gradient(135deg,#7b2ff7,#ff2d78);
+  background-size:cover;background-position:center;
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.55);font-size:.6rem;letter-spacing:3px;
+  font-family:'Inter',sans-serif;font-weight:600;
+}
+
+/* =========================================================
+   GLOBAL EDIT PANEL
+   ========================================================= */
+.panel{
+  position:fixed;top:0;right:0;bottom:0;
+  width:min(500px,96vw);
+  background:#fff;
+  box-shadow:-20px 0 60px rgba(0,0,0,.25);
+  transform:translateX(105%);
+  transition:transform .35s ease;
+  z-index:100;
+  display:flex;flex-direction:column;
+}
+.panel.open{transform:translateX(0);}
+.panel-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 22px;border-bottom:1px solid #eee;flex-shrink:0;
+}
+.panel-head h2{font-family:'Bodoni Moda',serif;font-size:1.25rem;}
+.close-btn{
+  background:#f0f0f0;border:none;width:34px;height:34px;border-radius:50%;
+  font-size:1rem;cursor:pointer;font-weight:700;
+}
+.panel-body{
+  padding:20px 22px;overflow-y:auto;flex:1;
+}
+.panel-footer{
+  padding:14px 22px 20px;
+  border-top:1px solid #eee;flex-shrink:0;
+  background:#fff;
+}
+
+.panel-body .field-group{margin-bottom:22px;}
+.panel-body .field-group h4{
+  font-family:'Bodoni Moda',serif;font-size:.95rem;
+  margin-bottom:12px;color:var(--ink);
+  padding-bottom:6px;border-bottom:1px solid #eee;
+}
+.panel-body .grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+.panel-body label{
+  display:flex;flex-direction:column;gap:5px;
+  font-size:.66rem;letter-spacing:.8px;text-transform:uppercase;
+  color:#888;font-weight:600;margin-bottom:10px;
+}
+.panel-body input:not([type=file]){
+  padding:9px 12px;border:1.5px solid #e0d8c8;border-radius:8px;
+  font-family:'Inter',sans-serif;font-size:.88rem;
+  background:var(--cream);color:var(--ink);
+}
+.panel-body input:focus{outline:none;border-color:var(--pink);}
+.panel-body .file-field{cursor:pointer;}
+.panel-body input[type=file]{
+  font-size:.72rem;padding:6px;background:var(--cream);
+  border-radius:8px;border:1.5px dashed #cbb98c;
+}
+.panel-body .filename{font-size:.62rem;color:#999;text-transform:none;letter-spacing:0;}
+
+.backdrop{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.4);
+  z-index:95;opacity:0;pointer-events:none;
+  transition:.3s;
+}
+.backdrop.open{opacity:1;pointer-events:auto;}
+
+/* =========================================================
+   BANNER 1 — LUXURY GOLD (4:5)
+   ========================================================= */
+.b1{
+  width:720px;max-width:100%;aspect-ratio:4/5;
+  background:var(--cream);padding:14px;
+}
+.b1-frame{
+  border:2px solid var(--gold);height:100%;
+  padding:22px 30px;display:flex;flex-direction:column;
+  position:relative;
+}
+.b1-top{
+  display:flex;justify-content:space-between;
+  font-size:.6rem;letter-spacing:3px;text-transform:uppercase;
+  font-weight:700;color:var(--gold-dk);margin-bottom:6px;
+}
+.b1-circle-wrap{
+  position:relative;width:190px;height:190px;margin:6px auto 0;
+}
+.b1-ring{
+  position:absolute;inset:-10px;border-radius:50%;
+  border:1px dashed var(--gold);animation:spin 40s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+.b1-circle{
+  position:absolute;inset:0;border-radius:50%;
+  border:3px solid var(--gold);overflow:hidden;
+}
+.b1-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--gold);}
+.b1-dot.d1{top:-4px;left:50%;transform:translateX(-50%);}
+.b1-dot.d2{bottom:-4px;left:50%;transform:translateX(-50%);}
+.b1-dot.d3{top:50%;right:-4px;transform:translateY(-50%);}
+.b1-name{text-align:center;margin-top:16px;}
+.b1-lbl{
+  font-size:.55rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold-dk);font-weight:700;margin-bottom:4px;
+}
+.b1-name h1{
+  font-family:'Playfair Display',serif;font-weight:900;
+  font-size:2.6rem;line-height:1;letter-spacing:-1px;
+}
+.b1-name h1 em{font-style:italic;color:var(--gold-dk);}
+.b1-tag{
+  font-family:'Playfair Display',serif;font-style:italic;
+  color:var(--gold-dk);font-size:.9rem;margin-top:6px;
+}
+.b1-lineup{margin-top:14px;padding:0 4px;}
+.b1-line{
+  display:flex;align-items:center;gap:10px;
+  padding:5px 0;border-bottom:1px dotted #d9c68a;
+  font-size:.82rem;
+}
+.b1-line:last-child{border-bottom:none;}
+.b1-line .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.b1-line b{flex:1;font-weight:700;}
+.b1-line i{
+  font-style:normal;font-size:.6rem;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--gold-dk);font-weight:600;
+}
+.b1-info{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin-top:14px;border-top:2px solid var(--gold);
+  border-bottom:2px solid var(--gold);
+}
+.b1-info > div{
+  padding:8px 2px;text-align:center;
+  border-right:1px solid #e0cf9a;
+}
+.b1-info > div:last-child{border-right:none;}
+.b1-info .k{
+  display:block;font-size:.5rem;letter-spacing:1.5px;
+  text-transform:uppercase;color:#a58b3d;font-weight:700;
+}
+.b1-info .v{
+  display:block;font-family:'Playfair Display',serif;
+  font-weight:700;font-size:.8rem;margin-top:2px;
+}
+.b1-bottom{
+  display:flex;gap:10px;margin-top:14px;align-items:center;
+  justify-content:center;
+}
+.b1-thumb{width:70px;height:70px;border-radius:50%;border:2px solid var(--gold);flex-shrink:0;}
+.b1-logo{
+  width:70px;height:70px;border-radius:50%;
+  border:2px solid var(--gold);flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold),#f5e0a8);
+}
+
+/* =========================================================
+   BANNER 2 — NEON POP (1:1)
+   ========================================================= */
+.b2{
+  width:720px;max-width:100%;aspect-ratio:1/1;
+  background:var(--cream);padding:24px;
+  display:flex;flex-direction:column;position:relative;
+}
+.b2-stamp{
+  position:absolute;top:46px;right:-30px;
+  transform:rotate(18deg);
+  background:var(--pink);color:#fff;
+  font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:4px;
+  padding:4px 60px;box-shadow:0 8px 24px rgba(255,45,120,.35);
+  z-index:3;
+}
+.b2-dots{
+  position:absolute;inset:0;pointer-events:none;opacity:.14;
+  background-image:radial-gradient(circle,#000 1px,transparent 1.5px);
+  background-size:14px 14px;
+}
+.b2-head{
+  display:flex;justify-content:space-between;
+  font-family:'Bebas Neue',sans-serif;letter-spacing:3px;
+  font-size:1rem;color:var(--blue);margin-bottom:10px;
+  position:relative;z-index:2;
+}
+.b2-circle-wrap{position:relative;width:220px;height:220px;margin:0 auto;z-index:2;}
+.b2-blob{
+  position:absolute;inset:-14px;
+  background:linear-gradient(135deg,var(--pink),var(--blue));
+  border-radius:48% 52% 55% 45% / 50% 45% 55% 50%;
+  animation:blob 8s ease-in-out infinite;
+}
+@keyframes blob{
+  0%,100%{border-radius:48% 52% 55% 45% / 50% 45% 55% 50%;}
+  50%{border-radius:55% 45% 48% 52% / 45% 55% 45% 55%;}
+}
+.b2-circle{
+  position:absolute;inset:0;border-radius:50%;overflow:hidden;
+  border:4px solid var(--ink);z-index:2;
+}
+.b2-name{margin-top:12px;text-align:center;position:relative;z-index:2;}
+.b2-name h1{
+  font-family:'Bebas Neue',sans-serif;font-weight:400;
+  font-size:3.2rem;line-height:.92;letter-spacing:2px;
+  display:flex;flex-direction:column;align-items:center;
+}
+.b2-name h1 .hl{
+  color:var(--pink);-webkit-text-stroke:2px var(--ink);
+  text-shadow:4px 4px 0 var(--blue);
+}
+.b2-tag{
+  font-family:'Poppins',sans-serif;font-weight:600;
+  font-size:.75rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--blue);margin-top:4px;
+}
+.b2-cluster{display:flex;justify-content:center;margin-top:12px;position:relative;z-index:2;}
+.b2-cluster .avatar{
+  width:52px;height:52px;border-radius:50%;
+  border:3px solid var(--cream);margin-left:-14px;
+  background:linear-gradient(135deg,var(--pink),var(--blue));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-family:'Bebas Neue',sans-serif;
+  font-size:1rem;letter-spacing:1px;
+}
+.b2-cluster .avatar:first-child{margin-left:0;}
+.b2-cluster .avatar.more{background:var(--ink);}
+.b2-pills{
+  display:flex;flex-wrap:wrap;gap:6px;justify-content:center;
+  margin-top:10px;position:relative;z-index:2;
+}
+.b2-pills span{
+  font-family:'Poppins',sans-serif;font-weight:800;
+  font-size:.6rem;letter-spacing:1px;text-transform:uppercase;
+  background:var(--ink);color:var(--cream);
+  padding:5px 12px;border-radius:999px;
+}
+.b2-pills span:nth-child(2){background:var(--blue);}
+.b2-pills span:nth-child(3){background:var(--pink);}
+.b2-pills span:nth-child(5){background:var(--blue);}
+.b2-info{display:flex;gap:8px;margin-top:auto;position:relative;z-index:2;}
+.b2-info > div{
+  flex:1;background:var(--cream-2);border-radius:10px;
+  padding:8px;text-align:center;border:2px solid var(--ink);
+}
+.b2-info .k{
+  display:block;font-family:'Poppins',sans-serif;
+  font-size:.5rem;letter-spacing:2px;text-transform:uppercase;
+  color:#888;font-weight:600;
+}
+.b2-info b{
+  display:block;font-family:'Poppins',sans-serif;font-weight:800;
+  font-size:.8rem;margin-top:2px;
+}
+.b2-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:10px;font-family:'Bebas Neue',sans-serif;
+  letter-spacing:3px;font-size:.8rem;position:relative;z-index:2;
+}
+.b2-foot .logo-sm{
+  width:38px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pink),var(--blue));
+}
+
+/* =========================================================
+   BANNER 3 — EDITORIAL MINIMAL (4:3)
+   ========================================================= */
+.b3{
+  width:900px;max-width:100%;aspect-ratio:4/3;
+  display:flex;background:var(--cream);
+  border:1px solid var(--ink);
+}
+.b3-left{
+  flex:1;padding:34px 32px;
+  display:flex;flex-direction:column;
+  border-right:1px solid var(--ink);
+}
+.b3-eyebrow{
+  font-family:'Work Sans',sans-serif;font-size:.65rem;
+  letter-spacing:5px;text-transform:uppercase;
+  color:var(--terra);font-weight:600;margin-bottom:14px;
+}
+.b3-arch{
+  width:100%;aspect-ratio:4/5;max-height:280px;
+  border-radius:200px 200px 0 0;overflow:hidden;
+  border:2px solid var(--ink);flex-shrink:0;
+}
+.b3-arch-inner{width:100%;height:100%;}
+.b3-name{margin-top:16px;}
+.b3-name h1{
+  font-family:'Cormorant Garamond',serif;font-weight:700;
+  font-size:2.6rem;line-height:.95;letter-spacing:-1px;
+}
+.b3-name h1 em{font-style:italic;color:var(--terra);font-weight:600;}
+.b3-tag{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.95rem;color:var(--terra);margin-top:8px;
+}
+.b3-right{
+  flex:1;padding:26px;display:flex;flex-direction:column;gap:14px;
+  background:var(--cream-2);
+}
+.b3-lineup{display:flex;flex-direction:column;gap:8px;}
+.b3-line{
+  display:flex;align-items:center;gap:12px;
+  padding-bottom:6px;border-bottom:1px solid #d6c8a8;
+}
+.b3-line:last-child{border-bottom:none;}
+.b3-line .badge{
+  width:26px;height:26px;border-radius:50%;
+  background:var(--terra);color:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-weight:700;font-size:.85rem;
+  flex-shrink:0;
+}
+.b3-line b{
+  display:block;font-family:'Work Sans',sans-serif;
+  font-weight:600;font-size:.82rem;
+}
+.b3-line i{
+  font-style:normal;font-family:'Work Sans',sans-serif;
+  font-size:.6rem;color:#888;letter-spacing:.5px;
+}
+.b3-info{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;
+  margin-top:auto;
+}
+.b3-info .k{
+  display:block;font-family:'Work Sans',sans-serif;
+  font-size:.5rem;letter-spacing:2px;text-transform:uppercase;
+  color:#999;font-weight:600;
+}
+.b3-info .v{
+  display:block;font-family:'Cormorant Garamond',serif;
+  font-weight:700;font-size:1rem;margin-top:2px;
+}
+.b3-thumbs{display:flex;gap:8px;align-items:center;}
+.b3-thumb{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--ink);flex-shrink:0;}
+.b3-logo{
+  width:56px;height:56px;border-radius:50%;
+  border:1.5px solid var(--ink);flex-shrink:0;
+  background:linear-gradient(135deg,var(--terra),var(--ink));
+}
+.b3-foot{
+  display:flex;justify-content:space-between;
+  font-family:'Work Sans',sans-serif;font-size:.6rem;
+  letter-spacing:2px;text-transform:uppercase;color:#888;
+  margin-top:auto;
+}
+
+/* =========================================================
+   BANNER 4 — RETRO FESTIVAL (16:9)
+   ========================================================= */
+.b4{
+  width:900px;max-width:100%;aspect-ratio:16/9;
+  background:var(--cream);position:relative;
+  border:2px dashed var(--forest);
+  padding:22px 26px;display:flex;flex-direction:column;
+  font-family:'DM Sans',sans-serif;
+}
+.b4-stub{
+  position:absolute;top:-12px;left:26px;
+  background:var(--orange);color:#fff;
+  font-family:'Righteous',sans-serif;font-size:.65rem;
+  letter-spacing:2px;padding:6px 16px;border-radius:4px;
+}
+.b4-top{
+  display:flex;justify-content:space-between;
+  font-family:'Righteous',sans-serif;font-size:.68rem;
+  letter-spacing:2px;color:var(--forest);text-transform:uppercase;
+  margin-top:6px;
+}
+.b4-hero{display:flex;gap:18px;margin-top:12px;align-items:center;}
+.b4-oval-wrap{position:relative;flex-shrink:0;}
+.b4-oval{
+  width:150px;height:190px;
+  border-radius:50% / 40%;
+  border:3px solid var(--forest);overflow:hidden;
+}
+.b4-sticker{
+  position:absolute;top:-8px;right:-8px;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;border:3px solid var(--cream);
+  transform:rotate(-15deg);
+}
+.b4-name{flex:1;}
+.b4-kick{
+  font-family:'DM Sans',sans-serif;font-style:italic;
+  font-size:.8rem;color:var(--orange);margin-bottom:6px;
+}
+.b4-name h1{
+  font-family:'Righteous',sans-serif;font-weight:400;
+  font-size:2.4rem;line-height:.98;color:var(--forest);
+  display:flex;flex-direction:column;
+}
+.b4-name h1 em{font-style:normal;color:var(--orange);}
+.b4-wave{width:100%;height:16px;margin:10px 0;}
+.b4-mid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+.b4-info{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;}
+.b4-info .k{
+  display:block;font-size:.5rem;letter-spacing:1.5px;
+  text-transform:uppercase;color:#999;font-weight:700;
+}
+.b4-info b{
+  display:block;font-family:'Righteous',sans-serif;
+  font-size:.8rem;color:var(--forest);font-weight:400;
+}
+.b4-lineup{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px 10px;}
+.b4-lineup > div{
+  font-family:'Righteous',sans-serif;font-size:.75rem;
+  color:var(--orange);font-weight:400;
+}
+.b4-thumbs{display:flex;gap:10px;margin-top:auto;align-items:center;}
+.b4-thumb{width:52px;height:52px;border-radius:50%;border:2px solid var(--forest);flex-shrink:0;}
+.b4-logo{
+  width:52px;height:52px;border-radius:50%;
+  border:2px solid var(--forest);flex-shrink:0;
+  background:linear-gradient(135deg,var(--forest),var(--orange));
+}
+
+/* =========================================================
+   BANNER 5 — FILM CONFERENCE (4:5, dark)
+   ========================================================= */
+.f1{width:820px;max-width:100%;aspect-ratio:4/5;background:var(--ink);color:var(--cream);}
+.f1-photo{position:absolute;inset:0;background:linear-gradient(135deg,#1a0f08,#3a1a20);}
+.f1-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(14,12,10,.55) 0%,rgba(14,12,10,.2) 40%,rgba(14,12,10,.92) 100%);
+}
+.f1-top{
+  position:relative;z-index:3;
+  display:flex;justify-content:space-between;
+  padding:26px 34px;
+  font-family:'Inter',sans-serif;font-size:.62rem;
+  letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);font-weight:600;
+}
+.f1-mid{
+  position:relative;z-index:3;
+  display:flex;align-items:center;gap:20px;
+  padding:0 34px;margin-top:60px;
+}
+.f1-vertical{
+  font-family:'Inter',sans-serif;font-size:.72rem;
+  letter-spacing:8px;text-transform:uppercase;
+  color:var(--gold);font-weight:700;
+  writing-mode:vertical-rl;transform:rotate(180deg);
+}
+.f1-title-block{flex:1;}
+.f1-title-block h1{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:5.4rem;line-height:.85;letter-spacing:-4px;
+  color:var(--cream);text-shadow:0 4px 30px rgba(0,0,0,.6);
+}
+.f1-hairline{height:2px;background:var(--gold);margin:18px 0 12px;width:60%;}
+.f1-sub{
+  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-size:1.4rem;color:var(--cream);opacity:.85;
+}
+.f1-bottom{
+  position:absolute;left:34px;right:34px;bottom:64px;z-index:3;
+  display:flex;gap:32px;align-items:flex-end;
+  border-top:1px solid rgba(201,162,39,.4);padding-top:18px;
+}
+.f1-detail{flex:1;}
+.f1-detail .k{
+  display:block;font-size:.55rem;letter-spacing:2px;
+  text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:4px;
+}
+.f1-detail .v{
+  display:block;font-family:'Bodoni Moda',serif;
+  font-size:1.15rem;color:var(--cream);font-weight:700;
+}
+.f1-thumbs{display:flex;gap:10px;}
+.f1-thumb{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--gold);}
+.f1-logo{
+  width:52px;height:52px;border-radius:50%;
+  border:1.5px solid var(--gold);
+  background:linear-gradient(135deg,var(--gold),var(--wine));
+}
+.f1-footer{
+  position:absolute;left:34px;right:34px;bottom:22px;z-index:3;
+  display:flex;justify-content:center;
+  font-family:'Inter',sans-serif;font-size:.62rem;
+  letter-spacing:6px;text-transform:uppercase;
+  color:var(--gold);font-weight:600;
+}
+
+/* =========================================================
+   BANNER 6 — BOOK LAUNCH (4:5, cream)
+   ========================================================= */
+.f2{
+  width:720px;max-width:100%;aspect-ratio:4/5;
+  background:var(--cream);color:var(--ink);
+  padding:26px 32px;display:flex;flex-direction:column;
+  position:relative;
+}
+.f2-grain{
+  position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:
+    radial-gradient(circle at 20% 30%,rgba(90,18,32,.08) 0,transparent 40%),
+    radial-gradient(circle at 80% 70%,rgba(23,59,42,.08) 0,transparent 40%);
+}
+.f2-top{
+  display:flex;justify-content:space-between;
+  font-family:'Inter',sans-serif;font-size:.65rem;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--wine);font-weight:700;
+  border-bottom:1px solid var(--wine);
+  padding-bottom:10px;position:relative;z-index:2;
+}
+.f2-author-block{display:flex;align-items:center;gap:16px;margin-top:20px;position:relative;z-index:2;}
+.f2-author-img{
+  width:70px;height:70px;border-radius:50%;
+  background:linear-gradient(135deg,var(--wine),var(--terra));
+  border:2px solid var(--wine);flex-shrink:0;
+}
+.f2-author-name{
+  font-family:'Inter',sans-serif;font-weight:700;
+  font-size:.8rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--wine);
+}
+.f2-title-block{margin-top:20px;position:relative;z-index:2;}
+.f2-eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1rem;color:var(--terra);margin-bottom:6px;
+}
+.f2-title-block h1{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:3.2rem;line-height:.92;letter-spacing:-2px;
+  color:var(--ink);display:flex;flex-direction:column;
+}
+.f2-title-block h1 em{
+  font-style:italic;font-weight:700;
+  color:var(--wine);font-size:3.8rem;
+}
+.f2-foreword{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.05rem;color:#5a4a3a;margin-top:12px;line-height:1.4;
+}
+.f2-cover{
+  position:absolute;right:32px;top:32%;
+  width:180px;height:240px;
+  border:3px solid var(--ink);
+  box-shadow:-14px 14px 0 var(--wine);
+  background:linear-gradient(135deg,var(--wine),var(--ink));
+  z-index:2;transform:rotate(-3deg);
+}
+.f2-bottom{
+  margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;
+  position:relative;z-index:2;
+  border-top:2px solid var(--ink);padding-top:14px;
+}
+.f2-info{display:flex;gap:24px;}
+.f2-info .k{
+  display:block;font-size:.55rem;letter-spacing:2px;
+  text-transform:uppercase;color:#999;font-weight:700;margin-bottom:2px;
+}
+.f2-info .v{
+  display:block;font-family:'Bodoni Moda',serif;
+  font-size:1.05rem;font-weight:700;color:var(--ink);
+}
+.f2-logo{
+  width:50px;height:50px;border-radius:50%;
+  background:linear-gradient(135deg,var(--wine),var(--mustard));
+}
+.f2-footer{
+  margin-top:10px;font-family:'Inter',sans-serif;
+  font-size:.62rem;letter-spacing:3px;text-transform:uppercase;
+  color:var(--wine);font-weight:600;position:relative;z-index:2;
+}
+
+/* =========================================================
+   BANNER 7 — LIVE PERFORMANCE (4:5, dark)
+   ========================================================= */
+.f3{
+  width:820px;max-width:100%;aspect-ratio:4/5;
+  background:var(--ink);color:var(--cream);
+  display:flex;flex-direction:column;position:relative;
+}
+.f3-photo{position:absolute;inset:0;background:linear-gradient(135deg,#2a0a14,#0e0c0a);}
+.f3-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(14,12,10,.5) 0%,rgba(14,12,10,.15) 35%,rgba(14,12,10,.95) 100%);
+}
+.f3-top{
+  position:relative;z-index:3;
+  display:flex;justify-content:space-between;
+  padding:24px 32px;
+  font-family:'Inter',sans-serif;font-size:.65rem;
+  letter-spacing:4px;text-transform:uppercase;
+  color:var(--cream);font-weight:700;
+}
+.f3-top span:last-child{color:var(--mustard);}
+.f3-name{position:relative;z-index:3;padding:0 32px;margin-top:auto;margin-bottom:16px;}
+.f3-name h1{
+  font-family:'Anton',sans-serif;font-weight:400;
+  font-size:9rem;line-height:.82;letter-spacing:-3px;
+  color:var(--cream);text-transform:uppercase;
+  text-shadow:0 6px 40px rgba(0,0,0,.7);
+}
+.f3-name2{
+  font-family:'Anton',sans-serif;
+  font-size:3rem;line-height:1;
+  color:transparent;
+  -webkit-text-stroke:2px var(--mustard);
+  letter-spacing:2px;margin-top:-4px;
+}
+.f3-guests{
+  position:relative;z-index:3;
+  display:flex;gap:16px;justify-content:space-around;
+  padding:20px 32px 24px;
+  border-top:1px solid rgba(217,155,28,.35);
+  border-bottom:1px solid rgba(217,155,28,.35);
+  margin:0 32px;
+}
+.f3-guest{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.f3-guest-img{
+  width:64px;height:64px;border-radius:50%;
+  border:2px solid var(--mustard);
+  background:linear-gradient(135deg,var(--wine),var(--mustard));
+}
+.f3-guest span{
+  font-family:'Inter',sans-serif;font-size:.62rem;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--cream);font-weight:600;
+}
+.f3-info{
+  position:relative;z-index:3;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  padding:18px 32px;gap:12px;
+}
+.f3-info .k{
+  display:block;font-size:.55rem;letter-spacing:2px;
+  text-transform:uppercase;color:var(--mustard);font-weight:700;margin-bottom:4px;
+}
+.f3-info .v{
+  display:block;font-family:'Bodoni Moda',serif;
+  font-size:.95rem;color:var(--cream);font-weight:700;
+}
+.f3-footer{
+  position:relative;z-index:3;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 32px 24px;
+  font-family:'Inter',sans-serif;font-size:.6rem;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:rgba(246,239,224,.65);font-weight:600;
+}
+.f3-logo{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--mustard),var(--wine));
+}
+
+/* =========================================================
+   BANNER 8 — ARENA FESTIVAL (4:5, navy)
+   ========================================================= */
+.f4{
+  width:820px;max-width:100%;aspect-ratio:4/5;
+  background:var(--navy);color:var(--cream);
+  position:relative;overflow:hidden;
+}
+.f4-photo{position:absolute;inset:0;background:linear-gradient(135deg,#0a1230,#12224a);}
+.f4-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(18,34,74,.6) 0%,rgba(18,34,74,.2) 40%,rgba(18,34,74,.95) 100%);
+}
+.f4-top{
+  position:relative;z-index:3;
+  display:flex;justify-content:space-between;
+  padding:22px 32px;
+  font-family:'Inter',sans-serif;font-size:.65rem;
+  letter-spacing:4px;text-transform:uppercase;
+  color:var(--mustard);font-weight:700;
+}
+.f4-top b{font-size:.95rem;}
+.f4-mega{position:relative;z-index:3;padding:20px 32px 0;text-align:center;}
+.f4-word{
+  font-family:'Anton',sans-serif;
+  font-size:9rem;line-height:.82;letter-spacing:-4px;
+  color:var(--cream);text-transform:uppercase;
+}
+.f4-word.outline{color:transparent;-webkit-text-stroke:3px var(--mustard);}
+.f4-sub{
+  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-size:1.3rem;color:var(--cream);opacity:.85;
+  margin-top:10px;letter-spacing:1px;
+}
+.f4-lineup{
+  position:relative;z-index:3;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0 40px;padding:26px 32px;margin-top:20px;
+}
+.f4-line{
+  display:flex;align-items:center;gap:14px;
+  padding:10px 0;
+  border-bottom:1px solid rgba(217,155,28,.3);
+}
+.f4-line .num{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:1.1rem;color:var(--mustard);
+}
+.f4-line b{
+  font-family:'Bodoni Moda',serif;font-weight:700;
+  font-size:1.3rem;color:var(--cream);letter-spacing:-.5px;
+}
+.f4-bottom{
+  position:absolute;left:32px;right:32px;bottom:60px;z-index:3;
+  display:flex;justify-content:space-between;align-items:flex-end;
+  border-top:1px solid rgba(217,155,28,.4);padding-top:14px;
+}
+.f4-info{display:flex;gap:28px;}
+.f4-info .k{
+  display:block;font-size:.55rem;letter-spacing:2px;
+  text-transform:uppercase;color:var(--mustard);font-weight:700;margin-bottom:4px;
+}
+.f4-info .v{
+  display:block;font-family:'Bodoni Moda',serif;
+  font-size:1.05rem;color:var(--cream);font-weight:700;
+}
+.f4-thumbs{display:flex;gap:10px;}
+.f4-thumb{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--mustard);}
+.f4-logo{
+  width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(135deg,var(--mustard),var(--wine));
+}
+.f4-footer{
+  position:absolute;left:32px;right:32px;bottom:22px;z-index:3;
+  display:flex;justify-content:center;
+  font-family:'Inter',sans-serif;font-size:.62rem;
+  letter-spacing:5px;text-transform:uppercase;
+  color:var(--mustard);font-weight:700;
+}
+
+/* =========================================================
+   BANNER 9 — NEWSPAPER FRONT PAGE (4:5)
+   ========================================================= */
+.n1{
+  width:720px;max-width:100%;aspect-ratio:4/5;
+  background:#fbf6e8;color:#111;
+  padding:22px 26px;
+  display:flex;flex-direction:column;
+  font-family:'Bodoni Moda',serif;
+  border:1px solid #111;
+}
+.n1-masthead{
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:14px;align-items:end;
+  padding-bottom:8px;
+}
+.n1-mast-left{display:flex;flex-direction:column;font-size:.55rem;letter-spacing:1px;gap:2px;}
+.n1-mast-right{display:flex;flex-direction:column;text-align:right;font-size:.55rem;letter-spacing:1px;gap:2px;}
+.n1-mast-title{
+  font-family:'UnifrakturCook',serif;
+  font-size:2.4rem;line-height:1;text-align:center;letter-spacing:0;
+}
+.n1-rule-thick{
+  height:3px;background:#111;
+  border-top:1px solid #111;border-bottom:1px solid #111;
+  margin:2px 0 12px;height:5px;
+}
+.n1-headline{text-align:center;margin-bottom:14px;}
+.n1-kicker{
+  font-size:.55rem;letter-spacing:4px;text-transform:uppercase;
+  font-weight:700;margin-bottom:6px;
+}
+.n1-headline h1{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:2.2rem;line-height:1;letter-spacing:-1px;
+  margin-bottom:8px;
+}
+.n1-subhead{
+  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-size:.85rem;color:#333;line-height:1.35;
+}
+.n1-columns{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:14px;
+  border-top:1px solid #111;border-bottom:1px solid #111;
+  padding:12px 0;flex:1;min-height:0;
+}
+.n1-col{display:flex;flex-direction:column;gap:6px;min-height:0;}
+.n1-photo{
+  flex:1;min-height:120px;
+  background:linear-gradient(135deg,#a89668,#4a3a20);
+}
+.n1-caption{
+  font-size:.5rem;font-style:italic;color:#555;letter-spacing:.5px;
+  line-height:1.3;
+}
+.n1-art-title{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:.8rem;line-height:1.1;
+  letter-spacing:-.3px;
+}
+.n1-art-body{
+  font-family:'Bodoni Moda',serif;
+  font-size:.65rem;line-height:1.35;color:#333;
+}
+.n1-rule-thin{height:1px;background:#111;margin:4px 0;}
+
+.n1-ticket{
+  position:relative;
+  margin-top:14px;
+  background:#fbf6e8;
+  border:1.5px solid #111;
+  display:grid;grid-template-columns:1fr 20px auto;
+  align-items:stretch;
+}
+.n1-ticket-punch{
+  position:absolute;width:16px;height:16px;border-radius:50%;
+  background:#d9d0bc;border:1.5px solid #111;
+}
+.n1-ticket-punch.left{left:-9px;top:50%;transform:translateY(-50%);}
+.n1-ticket-punch.right{right:-9px;top:50%;transform:translateY(-50%);}
+.n1-ticket-main{padding:10px 14px;}
+.n1-ticket-label{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:.75rem;letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:6px;
+}
+.n1-ticket-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.n1-ticket-row .k{
+  display:block;font-size:.5rem;letter-spacing:1px;
+  text-transform:uppercase;color:#666;font-weight:700;
+}
+.n1-ticket-row b{
+  display:block;font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:.85rem;
+}
+.n1-ticket-tear{
+  display:flex;align-items:center;justify-content:center;
+  border-left:1.5px dashed #111;
+  border-right:1.5px dashed #111;
+  font-size:.7rem;
+}
+.n1-ticket-stub{
+  padding:10px 14px;text-align:center;
+  min-width:130px;
+}
+.n1-stub-top{
+  font-size:.5rem;letter-spacing:3px;text-transform:uppercase;
+  font-weight:700;
+}
+.n1-stub-code{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:.7rem;margin:3px 0;
+}
+.n1-stub-bottom{
+  font-size:.5rem;font-style:italic;color:#666;
+}
+.n1-footer{
+  display:flex;justify-content:space-between;
+  margin-top:10px;padding-top:6px;
+  border-top:1px solid #111;
+  font-size:.55rem;letter-spacing:2px;text-transform:uppercase;
+  font-weight:700;
+}
+
+/* =========================================================
+   BANNER 10 — VINYL RECORD SLEEVE (1:1)
+   ========================================================= */
+.v1{
+  width:820px;max-width:100%;aspect-ratio:1/1;
+  background:#1a1612;color:var(--cream);
+  display:grid;grid-template-columns:1.2fr 1fr;
+  padding:24px;gap:20px;
+  font-family:'Inter',sans-serif;
+}
+.v1-sleeve{
+  position:relative;background:#000;
+  border-radius:4px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.v1-disc{
+  position:relative;width:88%;aspect-ratio:1/1;
+  border-radius:50%;
+  background:radial-gradient(circle at center,#0a0a0a 0%,#1a1a1a 30%,#050505 100%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.1),0 20px 60px rgba(0,0,0,.8);
+}
+.v1-grooves{
+  position:absolute;inset:6%;border-radius:50%;
+  background:repeating-radial-gradient(circle,rgba(255,255,255,.04) 0 1px,transparent 1px 3px);
+}
+.v1-label{
+  position:absolute;top:50%;left:50%;
+  width:36%;aspect-ratio:1/1;
+  border-radius:50%;transform:translate(-50%,-50%);
+  background:linear-gradient(135deg,#ff2d78,#7b2ff7);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;text-align:center;
+  color:#fff;
+}
+.v1-label-inner{padding:8px;}
+.v1-label-top{font-size:.5rem;letter-spacing:2px;opacity:.9;}
+.v1-label-name{
+  font-family:'Anton',sans-serif;font-size:.85rem;
+  line-height:1;margin:6px 0;letter-spacing:-.5px;
+}
+.v1-label-sub{font-family:'Bodoni Moda',serif;font-style:italic;font-size:.55rem;opacity:.9;}
+.v1-hole{
+  position:absolute;top:50%;left:50%;
+  width:5%;aspect-ratio:1/1;border-radius:50%;
+  background:#000;transform:translate(-50%,-50%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.2);
+}
+.v1-cover{
+  position:absolute;left:-8%;bottom:-8%;
+  width:62%;aspect-ratio:1/1;
+  background:#111;border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 20px 40px rgba(0,0,0,.7);
+  display:flex;flex-direction:column;padding:10px;
+}
+.v1-cover-photo{
+  flex:1;background:linear-gradient(135deg,#c9a227,#7a1f2b);
+  margin-bottom:8px;
+}
+.v1-cover-info{color:var(--cream);}
+.v1-cover-artist{
+  font-family:'Anton',sans-serif;font-size:.95rem;
+  line-height:1;letter-spacing:-.3px;
+}
+.v1-cover-album{
+  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-size:.6rem;color:var(--gold);margin-top:2px;
+}
+.v1-cover-cat{
+  font-size:.45rem;letter-spacing:2px;
+  color:rgba(246,239,224,.5);margin-top:4px;
+}
+.v1-tracklist{
+  display:flex;flex-direction:column;gap:6px;
+  padding:12px 4px;
+}
+.v1-track-head{
+  font-family:'Anton',sans-serif;font-size:1.4rem;
+  letter-spacing:2px;text-transform:uppercase;
+  border-bottom:2px solid var(--gold);
+  padding-bottom:8px;margin-bottom:4px;
+}
+.v1-track{
+  display:grid;grid-template-columns:26px 1fr auto;
+  gap:8px;align-items:baseline;
+  font-size:.72rem;
+  padding:4px 0;
+  border-bottom:1px dotted rgba(246,239,224,.2);
+}
+.v1-track span:first-child{
+  font-family:'Anton',sans-serif;color:var(--gold);font-size:.8rem;
+}
+.v1-track .time{
+  font-family:'Bodoni Moda',serif;font-style:italic;
+  color:rgba(246,239,224,.6);font-size:.7rem;
+}
+.v1-meta{
+  margin-top:auto;
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:10px;padding-top:14px;
+  border-top:1px solid rgba(246,239,224,.2);
+}
+.v1-meta .k{
+  display:block;font-size:.5rem;letter-spacing:2px;
+  text-transform:uppercase;color:var(--gold);font-weight:700;
+  margin-bottom:3px;
+}
+.v1-meta b{
+  display:block;font-family:'Bodoni Moda',serif;
+  font-weight:700;font-size:.85rem;
+}
+
+/* =========================================================
+   BANNER 11 — THEATRE PLAYBILL (4:5)
+   ========================================================= */
+.t1{
+  width:720px;max-width:100%;aspect-ratio:4/5;
+  background:#f4ead2;color:#1a1208;
+  padding:16px;font-family:'Bodoni Moda',serif;
+}
+.t1-frame-outer{
+  border:3px double #1a1208;height:100%;padding:6px;
+}
+.t1-frame-inner{
+  border:1px solid #1a1208;height:100%;
+  padding:22px 26px;display:flex;flex-direction:column;
+  text-align:center;position:relative;
+}
+.t1-presenting{
+  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-size:.85rem;color:#5a4a2a;margin-bottom:6px;
+}
+.t1-ornament{
+  font-size:1.4rem;color:#7a1f2b;margin-bottom:8px;
+}
+.t1-title{
+  font-family:'Bodoni Moda',serif;font-weight:900;
+  font-size:2.6rem;line-height:.95;letter-spacing:-1px;
+  display:flex;flex-direction:column;
+}
+.t1-title em{
+  font-style:italic;color:#7a1f2b;font-weight:700;
+  font-size:3.2rem;
+}
+.t1-byline{
+  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-size:.85rem;color:#5a4a2a;margin-top:8px;
+}
+.t1-rule{
+  height:2px;background:#1a1208;margin:14px 40px;
+}
+.t1-billing{
+  display:flex;flex-direction:column;gap:4px;
+}
+.t1-starring-label,
+.t1-with-label{
+  font-size:.55rem;letter-spacing:4px;text-transform:uppercase;
+  color:#7a1f2b;font-weight:700;
+}
+.t1-starring{
+  font-family:'Anton',sans-serif;font-size:1.4rem;
+  letter-spacing:1px;line-height:1;margin-bottom:6px;
+}
+.t1-cast{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4px 12px;margin-top:4px;
+}
+.t1-cast > div{text-align:center;}
+.t1-cast b{
+  display:block;font-family:'Bodoni Moda',serif;
+  font-weight:900;font-size:.85rem;
+}
+.t1-cast i{
+  display:block;font-family:'Bodoni Moda',serif;
+  font-style:italic;font-size:.65rem;color:#5a4a2a;
+}
+.t1-billing-block{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:6px 16px;
+}
+.t1-billing-block .k{
+  display:block;font-size:.5rem;letter-spacing:2px;
+  text-transform:uppercase;color:#7a1f2b;font-weight:700;
+}
+.t1-billing-block b{
+  display:block;font-family:'Bodoni Moda',serif;
+  font-weight:700;font-size:.8rem;
+}
+.t1-photo{
+  flex:1;min-height:80px;margin-top:14px;
+  background:linear-gradient(135deg,#7a1f2b,#1a1208);
+  border:1px solid #1a1208;
+}
+.t1-footer{
+  margin-top:10px;font-family:'Bodoni Moda',serif;
+  font-style:italic;font-size:.7rem;color:#5a4a2a;
+}
+
+/* =========================================================
+   BANNER 12 — BOARDING PASS (16:9)
+   ========================================================= */
+.p1{
+  width:960px;max-width:100%;aspect-ratio:16/9;
+  background:var(--cream);color:var(--ink);
+  display:grid;grid-template-columns:1fr 22px auto;
+  font-family:'Inter',sans-serif;
+  border:1px solid var(--ink);
+}
+.p1-main{padding:24px 28px;display:flex;flex-direction:column;}
+.p1-head{
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:2px solid var(--ink);padding-bottom:8px;
+}
+.p1-airline{
+  font-family:'Anton',sans-serif;font-size:1.2rem;
+  letter-spacing:2px;
+}
+.p1-class{
+  font-size:.6rem;letter-spacing:3px;text-transform:uppercase;
+  font-weight:700;
+}
+.p1-route{
+  display:grid;grid-template-columns:1fr auto 1fr;
+  align-items:center;gap:16px;margin-top:14px;
+}
+.p1-city.right{text-align:right;}
+.p1-code{
+  font-family:'Anton',sans-serif;font-size:3rem;
+  line-height:1;letter-spacing:-1px;
+}
+.p1-city-name{
+  font-size:.65rem;letter-spacing:3px;text-transform:uppercase;
+  color:#666;margin-top:2px;
+}
+.p1-plane{
+  font-size:1.6rem;color:var(--ink);
+  padding:0 10px;transform:translateY(-6px);
+}
+.p1-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:10px 20px;margin-top:auto;
+  border-top:1px dashed #999;padding-top:12px;
+}
+.p1-grid .k{
+  display:block;font-size:.5rem;letter-spacing:2px;
+  text-transform:uppercase;color:#888;font-weight:700;margin-bottom:2px;
+}
+.p1-grid b{
+  display:block;font-family:'Anton',sans-serif;
+  font-size:.95rem;letter-spacing:.5px;
+}
+.p1-foot{
+  font-size:.55rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:#666;margin-top:10px;font-weight:600;
+}
+.p1-perf{
+  background:
+    repeating-linear-gradient(to bottom,transparent 0 6px,#999 6px 12px);
+  width:1px;margin:0 auto;position:relative;
+}
+.p1-perf::before,.p1-perf::after{
+  content:"";position:absolute;left:-8px;width:16px;height:16px;
+  border-radius:50%;background:#d9d0bc;border:1px solid var(--ink);
+}
+.p1-perf::before{top:-8px;}
+.p1-perf::after{bottom:-8px;}
+.p1-stub{
+  padding:24px 22px;display:flex;flex-direction:column;
+  justify-content:space-between;min-width:150px;
+  text-align:center;
+}
+.p1-stub-label{
+  font-size:.55rem;letter-spacing:3px;text-transform:uppercase;
+  font-weight:700;
+}
+.p1-stub-code{
+  font-family:'Anton',sans-serif;font-size:1.4rem;
+  letter-spacing:1px;
+}
+.p1-stub-seat{
+  font-family:'Anton',sans-serif;font-size:2.4rem;
+  letter-spacing:1px;line-height:1;
+}
+.p1-barcode{
+  height:40px;margin:8px 0;
+  background:repeating-linear-gradient(to right,
+    #111 0 2px,transparent 2px 4px,
+    #111 4px 5px,transparent 5px 9px,
+    #111 9px 12px,transparent 12px 14px);
+}
+.p1-stub-foot{
+  font-size:.5rem;letter-spacing:2px;
+  color:#666;font-weight:600;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media(max-width:760px){
+  body{background:var(--ink);padding-bottom:0;}
+  .group-heading{
+    color:var(--cream);border-bottom-color:var(--gold);
+    font-size:1.2rem;margin-top:36px;
+  }
+  .banner-wrap{max-width:none;margin:20px 0;padding:0;}
+  .banner-meta{
+    padding:14px 18px 0;color:var(--cream);
+  }
+  .banner-meta h2{color:var(--cream);font-size:1.05rem;}
+  .banner-meta .sub{color:#a99a7e;}
+  .btn-edit-sm{font-size:.7rem;padding:7px 12px;}
+  .btn-dl-sm{background:var(--cream);color:var(--ink);font-size:.7rem;padding:7px 12px;}
+  .preview{
+    border-radius:0;padding:16px 12px;
+    background:transparent;box-shadow:none;
+    min-height:calc(100vh - 100px);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .banner{max-height:calc(100vh - 160px);margin:0 auto;}
+
+  .f1-title-block h1{font-size:3.4rem;letter-spacing:-2px;}
+  .f3-name h1{font-size:5.5rem;}
+  .f4-word{font-size:5.5rem;letter-spacing:-3px;}
+  .f2-title-block h1{font-size:2.4rem;}
+  .f2-title-block h1 em{font-size:2.8rem;}
+  .f2-cover{width:120px;height:160px;right:22px;}
+  .n1-mast-title{font-size:1.6rem;}
+  .n1-headline h1{font-size:1.6rem;}
+  .b3{flex-direction:column;aspect-ratio:auto;}
+  .b3-left{border-right:none;border-bottom:1px solid var(--ink);}
+  .b4{aspect-ratio:auto;}
+  .b4-hero{flex-direction:column;}
+  .v1{grid-template-columns:1fr;aspect-ratio:auto;}
+  .p1{grid-template-columns:1fr;aspect-ratio:auto;}
+  .p1-perf{display:none;}
+}

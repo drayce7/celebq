@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ultimate Banner Studio — 12 Designs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;600;700;900&family=Bebas+Neue&family=Poppins:wght@400;600;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@300;400;600&family=Righteous&family=DM+Sans:wght@400;500;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,700&family=Archivo+Black&family=Anton&family=Space+Grotesk:wght@400;500;700&family=UnifrakturCook:wght@700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="brand">✦ Ultimate Banner Studio</div>
+  <div class="topbar-actions">
+    <button class="btn btn-save" onclick="savePage()">💾 Save Page</button>
+    <button class="btn btn-reset-top" onclick="resetAll()">↺ Reset</button>
+  </div>
+</header>
+
+<!-- ============ GLOBAL EDIT PANEL ============ -->
+<aside class="panel" id="panel">
+  <div class="panel-head">
+    <h2 id="panelTitle">Edit Banner</h2>
+    <button class="close-btn" onclick="closePanel()">✕</button>
+  </div>
+  <div class="panel-body" id="panelBody"></div>
+  <div class="panel-footer">
+    <button class="btn btn-apply" onclick="applyCurrent()">Apply Changes</button>
+  </div>
+</aside>
+
+<div class="backdrop" id="backdrop" onclick="closePanel()"></div>
+
+<!-- ================================================================
+     GROUP 1 — PARTY COLLECTION
+     ================================================================ -->
+<h2 class="group-heading">Group 1 · Party Collection</h2>
+
+<!-- ===== 1. LUXURY GOLD ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>01 · Luxury Gold</h2>
+      <p class="sub">Circular portrait · Gold ring · 4 associates</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('b1')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('b1','luxury-gold')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner b1" id="b1">
+      <div class="b1-frame">
+        <div class="b1-top">
+          <span data-s="label">Live In Concert</span>
+          <span data-s="rsvp">RSVP · 12 · 31 · 2025</span>
+        </div>
+        <div class="b1-circle-wrap">
+          <div class="b1-ring"></div>
+          <div class="b1-circle img" data-img="b1_photo">ARTIST</div>
+          <div class="b1-dot d1"></div>
+          <div class="b1-dot d2"></div>
+          <div class="b1-dot d3"></div>
+        </div>
+        <div class="b1-name">
+          <div class="b1-lbl" data-s="label">Live In Concert</div>
+          <h1><span data-s="name1">THE</span> <em data-s="name2">Midnight</em><br><span data-s="name3">ICON</span></h1>
+          <div class="b1-tag" data-s="tagline">One Night. One Icon.</div>
+        </div>
+        <div class="b1-lineup">
+          <div class="b1-line"><span class="dot"></span><b data-s="b1_a1n">DJ Nova</b><i data-s="b1_a1r">Opening Set</i></div>
+          <div class="b1-line"><span class="dot"></span><b data-s="b1_a2n">Luna Ray</b><i data-s="b1_a2r">Live Band</i></div>
+          <div class="b1-line"><span class="dot"></span><b data-s="b1_a3n">MC Blaze</b><i data-s="b1_a3r">Host</i></div>
+          <div class="b1-line"><span class="dot"></span><b data-s="b1_a4n">Kofi Beats</b><i data-s="b1_a4r">After Party</i></div>
+        </div>
+        <div class="b1-info">
+          <div><span class="k">Date</span><span class="v" data-s="date">Dec 31</span></div>
+          <div><span class="k">Time</span><span class="v" data-s="time">9:00 PM</span></div>
+          <div><span class="k">Venue</span><span class="v" data-s="venue">The Grand Hall</span></div>
+          <div><span class="k">City</span><span class="v" data-s="city">Lagos</span></div>
+        </div>
+        <div class="b1-bottom">
+          <div class="b1-thumb img" data-img="b1_t1"></div>
+          <div class="b1-thumb img" data-img="b1_t2"></div>
+          <div class="b1-logo img" data-img="b1_logo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. NEON POP ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>02 · Neon Pop</h2>
+      <p class="sub">Avatar cluster · Pills · 6 associates</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('b2')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('b2','neon-pop')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner b2" id="b2">
+      <div class="b2-stamp">LIVE</div>
+      <div class="b2-dots"></div>
+      <div class="b2-head">
+        <span data-s="label">Live In Concert</span>
+        <span data-s="city">Lagos</span>
+      </div>
+      <div class="b2-circle-wrap">
+        <div class="b2-blob"></div>
+        <div class="b2-circle img" data-img="b2_photo">ARTIST</div>
+      </div>
+      <div class="b2-name">
+        <h1>
+          <span data-s="name1">THE</span>
+          <span class="hl" data-s="name2">Midnight</span>
+          <span data-s="name3">ICON</span>
+        </h1>
+        <div class="b2-tag" data-s="tagline">One Night. One Icon.</div>
+      </div>
+      <div class="b2-cluster">
+        <div class="avatar img" data-img="b2_a1img"></div>
+        <div class="avatar img" data-img="b2_a2img"></div>
+        <div class="avatar img" data-img="b2_a3img"></div>
+        <div class="avatar more">+3</div>
+      </div>
+      <div class="b2-pills">
+        <span data-s="b2_a1n">DJ Nova</span>
+        <span data-s="b2_a2n">Luna Ray</span>
+        <span data-s="b2_a3n">MC Blaze</span>
+        <span data-s="b2_a4n">Kofi Beats</span>
+        <span data-s="b2_a5n">Zara V</span>
+        <span data-s="b2_a6n">Sonic P</span>
+      </div>
+      <div class="b2-info">
+        <div><span class="k">Date</span><b data-s="date">Dec 31</b></div>
+        <div><span class="k">Time</span><b data-s="time">9:00 PM</b></div>
+        <div><span class="k">Venue</span><b data-s="venue">The Grand Hall</b></div>
+      </div>
+      <div class="b2-foot">
+        <span data-s="rsvp">RSVP · 12 · 31 · 2025</span>
+        <span class="logo-sm img" data-img="b2_logo"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. EDITORIAL MINIMAL ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>03 · Editorial Minimal</h2>
+      <p class="sub">Arched frame · Numbered badges · 5 associates</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('b3')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('b3','editorial-minimal')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner b3" id="b3">
+      <div class="b3-left">
+        <div class="b3-eyebrow" data-s="label">Live In Concert</div>
+        <div class="b3-arch">
+          <div class="b3-arch-inner img" data-img="b3_photo">ARTIST</div>
+        </div>
+        <div class="b3-name">
+          <h1>
+            <span data-s="name1">THE</span><br>
+            <em data-s="name2">Midnight</em><br>
+            <span data-s="name3">ICON</span>
+          </h1>
+          <div class="b3-tag" data-s="tagline">One Night. One Icon.</div>
+        </div>
+      </div>
+      <div class="b3-right">
+        <div class="b3-lineup">
+          <div class="b3-line"><span class="badge">1</span><div><b data-s="b3_a1n">DJ Nova</b><i data-s="b3_a1r">Opening Set</i></div></div>
+          <div class="b3-line"><span class="badge">2</span><div><b data-s="b3_a2n">Luna Ray</b><i data-s="b3_a2r">Live Band</i></div></div>
+          <div class="b3-line"><span class="badge">3</span><div><b data-s="b3_a3n">MC Blaze</b><i data-s="b3_a3r">Host</i></div></div>
+          <div class="b3-line"><span class="badge">4</span><div><b data-s="b3_a4n">Kofi Beats</b><i data-s="b3_a4r">After Party</i></div></div>
+          <div class="b3-line"><span class="badge">5</span><div><b data-s="b3_a5n">Zara V</b><i data-s="b3_a5r">Special Guest</i></div></div>
+        </div>
+        <div class="b3-info">
+          <div><span class="k">Date</span><span class="v" data-s="date">Dec 31</span></div>
+          <div><span class="k">Time</span><span class="v" data-s="time">9:00 PM</span></div>
+          <div><span class="k">Venue</span><span class="v" data-s="venue">The Grand Hall</span></div>
+          <div><span class="k">City</span><span class="v" data-s="city">Lagos</span></div>
+        </div>
+        <div class="b3-thumbs">
+          <div class="b3-thumb img" data-img="b3_t1"></div>
+          <div class="b3-thumb img" data-img="b3_t2"></div>
+          <div class="b3-logo img" data-img="b3_logo"></div>
+        </div>
+        <div class="b3-foot">
+          <span data-s="rsvp">RSVP · 12 · 31 · 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. RETRO FESTIVAL ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>04 · Retro Festival</h2>
+      <p class="sub">Oval sticker · Wavy divider · 6 associates</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('b4')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('b4','retro-festival')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner b4" id="b4">
+      <div class="b4-stub">ADMIT ONE</div>
+      <div class="b4-top">
+        <span data-s="label">Live In Concert</span>
+        <span data-s="rsvp">RSVP · 12 · 31 · 2025</span>
+      </div>
+      <div class="b4-hero">
+        <div class="b4-oval-wrap">
+          <div class="b4-oval img" data-img="b4_photo">ARTIST</div>
+          <div class="b4-sticker">★</div>
+        </div>
+        <div class="b4-name">
+          <div class="b4-kick" data-s="tagline">One Night. One Icon.</div>
+          <h1>
+            <span data-s="name1">THE</span>
+            <em data-s="name2">Midnight</em>
+            <span data-s="name3">ICON</span>
+          </h1>
+        </div>
+      </div>
+      <svg class="b4-wave" viewBox="0 0 900 20" preserveAspectRatio="none">
+        <path d="M0 10 Q 30 0, 60 10 T 120 10 T 180 10 T 240 10 T 300 10 T 360 10 T 420 10 T 480 10 T 540 10 T 600 10 T 660 10 T 720 10 T 780 10 T 840 10 T 900 10" fill="none" stroke="#1e4d2b" stroke-width="2"/>
+      </svg>
+      <div class="b4-mid">
+        <div class="b4-info">
+          <div><span class="k">Date</span><b data-s="date">Dec 31</b></div>
+          <div><span class="k">Time</span><b data-s="time">9:00 PM</b></div>
+          <div><span class="k">Venue</span><b data-s="venue">The Grand Hall</b></div>
+          <div><span class="k">City</span><b data-s="city">Lagos</b></div>
+        </div>
+        <div class="b4-lineup">
+          <div><b data-s="b4_a1n">DJ Nova</b></div>
+          <div><b data-s="b4_a2n">Luna Ray</b></div>
+          <div><b data-s="b4_a3n">MC Blaze</b></div>
+          <div><b data-s="b4_a4n">Kofi Beats</b></div>
+          <div><b data-s="b4_a5n">Zara V</b></div>
+          <div><b data-s="b4_a6n">Sonic P</b></div>
+        </div>
+      </div>
+      <div class="b4-thumbs">
+        <div class="b4-thumb img" data-img="b4_t1"></div>
+        <div class="b4-thumb img" data-img="b4_t2"></div>
+        <div class="b4-logo img" data-img="b4_logo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     GROUP 2 — EDITORIAL COLLECTION
+     ================================================================ -->
+<h2 class="group-heading">Group 2 · Editorial Collection</h2>
+
+<!-- ===== 5. FILM CONFERENCE ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>05 · Film Conference</h2>
+      <p class="sub">Oversized Bodoni · Vertical rail</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('f1')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('f1','film-conference')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner f1" id="f1">
+      <div class="f1-photo img" data-img="f1_photo">HERO</div>
+      <div class="f1-overlay"></div>
+      <div class="f1-top">
+        <span data-f="f1_eyebrow">Official Selection</span>
+        <span data-f="f1_edition">Vol. XII</span>
+      </div>
+      <div class="f1-mid">
+        <div class="f1-vertical" data-f="f1_city">Paris</div>
+        <div class="f1-title-block">
+          <h1 data-f="f1_title">CINEMA</h1>
+          <div class="f1-hairline"></div>
+          <div class="f1-sub" data-f="f1_sub">The Future of Film</div>
+        </div>
+      </div>
+      <div class="f1-bottom">
+        <div class="f1-detail"><span class="k">Date</span><span class="v" data-f="f1_date">March 14–17</span></div>
+        <div class="f1-detail"><span class="k">Venue</span><span class="v" data-f="f1_venue">Palais Lumière</span></div>
+        <div class="f1-thumbs">
+          <div class="f1-thumb img" data-img="f1_t1"></div>
+          <div class="f1-thumb img" data-img="f1_t2"></div>
+          <div class="f1-logo img" data-img="f1_logo"></div>
+        </div>
+      </div>
+      <div class="f1-footer" data-f="f1_footer">Four Days · One Language</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. BOOK LAUNCH ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>06 · Book Launch</h2>
+      <p class="sub">Stacked display · Cover reveal</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('f2')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('f2','book-launch')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner f2" id="f2">
+      <div class="f2-grain"></div>
+      <div class="f2-top">
+        <span>Book Launch</span>
+        <span data-f="f2_city">Lagos</span>
+      </div>
+      <div class="f2-author-block">
+        <div class="f2-author-img img" data-img="f2_photo">AUTHOR</div>
+        <div class="f2-author-name" data-f="f2_author">AMARA OKAFOR</div>
+      </div>
+      <div class="f2-title-block">
+        <div class="f2-eyebrow">A New Book</div>
+        <h1>
+          <span data-f="f2_title">THE HOUR OF</span>
+          <em data-f="f2_title2">BECOMING</em>
+        </h1>
+        <div class="f2-foreword" data-f="f2_foreword">A memoir on light, loss, and returning</div>
+      </div>
+      <div class="f2-cover img" data-img="f2_cover">COVER</div>
+      <div class="f2-bottom">
+        <div class="f2-info">
+          <div><span class="k">Date</span><span class="v" data-f="f2_date">April 22</span></div>
+          <div><span class="k">Time</span><span class="v" data-f="f2_time">7:00 PM</span></div>
+          <div><span class="k">Venue</span><span class="v" data-f="f2_venue">The Lumière Library</span></div>
+        </div>
+        <div class="f2-logo img" data-img="f2_logo"></div>
+      </div>
+      <div class="f2-footer" data-f="f2_footer">Signed copies · Limited seating</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. LIVE PERFORMANCE ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>07 · Live Performance</h2>
+      <p class="sub">Anton mega type · Guest avatars</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('f3')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('f3','live-performance')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner f3" id="f3">
+      <div class="f3-photo img" data-img="f3_photo">ARTIST</div>
+      <div class="f3-overlay"></div>
+      <div class="f3-top">
+        <span data-f="f3_eyebrow">One Night Only</span>
+        <span data-f="f3_edition">LIVE</span>
+      </div>
+      <div class="f3-name">
+        <h1 data-f="f3_artist">ASE</h1>
+        <div class="f3-name2" data-f="f3_artist2">THE BAND</div>
+      </div>
+      <div class="f3-guests">
+        <div class="f3-guest">
+          <div class="f3-guest-img img" data-img="f3_g1img"></div>
+          <span data-f="f3_g1">Tems</span>
+        </div>
+        <div class="f3-guest">
+          <div class="f3-guest-img img" data-img="f3_g2img"></div>
+          <span data-f="f3_g2">Burna Boy</span>
+        </div>
+        <div class="f3-guest">
+          <div class="f3-guest-img img" data-img="f3_g3img"></div>
+          <span data-f="f3_g3">Wizkid</span>
+        </div>
+      </div>
+      <div class="f3-info">
+        <div><span class="k">Date</span><span class="v" data-f="f3_date">May 09</span></div>
+        <div><span class="k">Time</span><span class="v" data-f="f3_time">8:00 PM</span></div>
+        <div><span class="k">Venue</span><span class="v" data-f="f3_venue">Eko Convention Centre</span></div>
+        <div><span class="k">City</span><span class="v" data-f="f3_city">Lagos</span></div>
+      </div>
+      <div class="f3-footer">
+        <span data-f="f3_footer">Doors 7:00 PM · No re-entry</span>
+        <span class="f3-logo img" data-img="f3_logo"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. ARENA FESTIVAL ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>08 · Arena Festival</h2>
+      <p class="sub">Mega-word masthead · Stadium lineup</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('f4')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('f4','arena-festival')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner f4" id="f4">
+      <div class="f4-photo img" data-img="f4_photo">STAGE</div>
+      <div class="f4-overlay"></div>
+      <div class="f4-top">
+        <span>Edition <b data-f="f4_edition">03</b></span>
+        <span data-f="f4_city">Abuja</span>
+      </div>
+      <div class="f4-mega">
+        <div class="f4-word" data-f="f4_mega">AFRO</div>
+        <div class="f4-word outline" data-f="f4_mega2">NATION</div>
+        <div class="f4-sub" data-f="f4_sub">The Sound of a Continent</div>
+      </div>
+      <div class="f4-lineup">
+        <div class="f4-line"><span class="num">01</span><b data-f="f4_l1">Davido</b></div>
+        <div class="f4-line"><span class="num">02</span><b data-f="f4_l2">Wizkid</b></div>
+        <div class="f4-line"><span class="num">03</span><b data-f="f4_l3">Burna Boy</b></div>
+        <div class="f4-line"><span class="num">04</span><b data-f="f4_l4">Tems</b></div>
+      </div>
+      <div class="f4-bottom">
+        <div class="f4-info">
+          <div><span class="k">Date</span><span class="v" data-f="f4_date">Aug 21–24</span></div>
+          <div><span class="k">Venue</span><span class="v" data-f="f4_venue">National Stadium</span></div>
+        </div>
+        <div class="f4-thumbs">
+          <div class="f4-thumb img" data-img="f4_t1"></div>
+          <div class="f4-thumb img" data-img="f4_t2"></div>
+          <div class="f4-logo img" data-img="f4_logo"></div>
+        </div>
+      </div>
+      <div class="f4-footer" data-f="f4_footer">4 Days · 60 Artists · 2 Stages</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     GROUP 3 — NEW DESIGNS
+     ================================================================ -->
+<h2 class="group-heading">Group 3 · New Designs</h2>
+
+<!-- ===== 9. NEWSPAPER FRONT PAGE ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>09 · Newspaper Front Page</h2>
+      <p class="sub">Broadsheet masthead · Ticket stub · Info panel</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('n1')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('n1','newspaper')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner n1" id="n1">
+      <div class="n1-masthead">
+        <div class="n1-mast-left">
+          <span data-n="n1_edition">Vol. MMXXV · No. 12</span>
+          <span data-n="n1_price">Two Shillings</span>
+        </div>
+        <div class="n1-mast-title" data-n="n1_masthead">The Evening Herald</div>
+        <div class="n1-mast-right">
+          <span data-n="n1_date">Tuesday, December 31</span>
+          <span data-n="n1_city">Lagos Edition</span>
+        </div>
+      </div>
+      <div class="n1-rule-thick"></div>
+      <div class="n1-headline">
+        <div class="n1-kicker" data-n="n1_kicker">★ Exclusive · Tonight Only ★</div>
+        <h1 data-n="n1_headline">THE MIDNIGHT ICON TAKES THE STAGE</h1>
+        <div class="n1-subhead" data-n="n1_subhead">A once-in-a-generation performance arrives at The Grand Hall — and the city is ready.</div>
+      </div>
+      <div class="n1-columns">
+        <div class="n1-col">
+          <div class="n1-photo img" data-img="n1_photo">PHOTO</div>
+          <div class="n1-caption" data-n="n1_caption">Above: The artist arrives. Photo: Studio Archive</div>
+        </div>
+        <div class="n1-col">
+          <div class="n1-art-title" data-n="n1_a1t">What to Expect on the Night</div>
+          <div class="n1-art-body" data-n="n1_a1b">An evening of sound, light, and reunion. Doors open at nine. Guests are advised to arrive early.</div>
+          <div class="n1-rule-thin"></div>
+          <div class="n1-art-title" data-n="n1_a2t">Special Guests Announced</div>
+          <div class="n1-art-body" data-n="n1_a2b">The full lineup has been revealed — a rare gathering of four names on one stage for one night.</div>
+          <div class="n1-rule-thin"></div>
+          <div class="n1-art-title" data-n="n1_a3t">A Note from the Editor</div>
+          <div class="n1-art-body" data-n="n1_a3b">Some nights arrive quietly. This is not one of them. Reserve your seat, and dress accordingly.</div>
+        </div>
+      </div>
+      <div class="n1-ticket">
+        <div class="n1-ticket-punch left"></div>
+        <div class="n1-ticket-punch right"></div>
+        <div class="n1-ticket-main">
+          <div class="n1-ticket-label">Admit One</div>
+          <div class="n1-ticket-row">
+            <div><span class="k">Section</span><b data-n="n1_section">A</b></div>
+            <div><span class="k">Row</span><b data-n="n1_row">12</b></div>
+            <div><span class="k">Seat</span><b data-n="n1_seat">07</b></div>
+            <div><span class="k">Gate</span><b data-n="n1_gate">03</b></div>
+          </div>
+        </div>
+        <div class="n1-ticket-tear">
+          <span>✂</span>
+        </div>
+        <div class="n1-ticket-stub">
+          <div class="n1-stub-top">Stub</div>
+          <div class="n1-stub-code" data-n="n1_code">#MIC-2025-1231</div>
+          <div class="n1-stub-bottom" data-n="n1_ticket_footer">Keep this portion</div>
+        </div>
+      </div>
+      <div class="n1-footer">
+        <span data-n="n1_footer_left">The Grand Hall · 9:00 PM</span>
+        <span data-n="n1_footer_right">Continued on Page 12</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. VINYL RECORD SLEEVE ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>10 · Vinyl Record Sleeve</h2>
+      <p class="sub">Circular label · Tracklist · 1:1 album art</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('v1')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('v1','vinyl-sleeve')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner v1" id="v1">
+      <div class="v1-sleeve">
+        <div class="v1-disc">
+          <div class="v1-grooves"></div>
+          <div class="v1-label img" data-img="v1_label">
+            <div class="v1-label-inner">
+              <div class="v1-label-top">Side A · 33⅓ RPM</div>
+              <div class="v1-label-name" data-v="v1_artist">THE MIDNIGHT ICON</div>
+              <div class="v1-label-sub" data-v="v1_album">Live at The Grand Hall</div>
+            </div>
+          </div>
+          <div class="v1-hole"></div>
+        </div>
+        <div class="v1-cover">
+          <div class="v1-cover-photo img" data-img="v1_photo">COVER</div>
+          <div class="v1-cover-info">
+            <div class="v1-cover-artist" data-v="v1_artist">THE MIDNIGHT ICON</div>
+            <div class="v1-cover-album" data-v="v1_album">Live at The Grand Hall</div>
+            <div class="v1-cover-cat" data-v="v1_cat">CAT. NO. MGT-001 · STEREO</div>
+          </div>
+        </div>
+      </div>
+      <div class="v1-tracklist">
+        <div class="v1-track-head">Tracklist</div>
+        <div class="v1-track"><span>A1</span><span data-v="v1_t1">Overture</span><span class="time" data-v="v1_t1time">3:12</span></div>
+        <div class="v1-track"><span>A2</span><span data-v="v1_t2">Neon Nights</span><span class="time" data-v="v1_t2time">4:48</span></div>
+        <div class="v1-track"><span>A3</span><span data-v="v1_t3">Golden Hour</span><span class="time" data-v="v1_t3time">5:21</span></div>
+        <div class="v1-track"><span>B1</span><span data-v="v1_t4">Midnight Theme</span><span class="time" data-v="v1_t4time">6:02</span></div>
+        <div class="v1-track"><span>B2</span><span data-v="v1_t5">After the Last Song</span><span class="time" data-v="v1_t5time">4:15</span></div>
+        <div class="v1-meta">
+          <div><span class="k">Date</span><b data-v="v1_date">Dec 31</b></div>
+          <div><span class="k">Venue</span><b data-v="v1_venue">The Grand Hall</b></div>
+          <div><span class="k">City</span><b data-v="v1_city">Lagos</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. THEATRE PLAYBILL ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>11 · Theatre Playbill</h2>
+      <p class="sub">Ornamental frame · Cast list · Billing block</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('t1')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('t1','theatre-playbill')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner t1" id="t1">
+      <div class="t1-frame-outer">
+        <div class="t1-frame-inner">
+          <div class="t1-presenting" data-t="t1_presenting">The Grand Theatre presents</div>
+          <div class="t1-ornament">❦</div>
+          <h1 class="t1-title">
+            <span data-t="t1_title1">The Midnight</span>
+            <em data-t="t1_title2">Icon</em>
+          </h1>
+          <div class="t1-byline" data-t="t1_byline">A live performance in three acts</div>
+          <div class="t1-rule"></div>
+          <div class="t1-billing">
+            <div class="t1-starring-label">Starring</div>
+            <div class="t1-starring" data-t="t1_starring">THE MIDNIGHT ICON</div>
+            <div class="t1-with-label">With</div>
+            <div class="t1-cast">
+              <div><b data-t="t1_c1n">DJ Nova</b><i data-t="t1_c1r">as The Opener</i></div>
+              <div><b data-t="t1_c2n">Luna Ray</b><i data-t="t1_c2r">as The Voice</i></div>
+              <div><b data-t="t1_c3n">MC Blaze</b><i data-t="t1_c3r">as The Host</i></div>
+              <div><b data-t="t1_c4n">Kofi Beats</b><i data-t="t1_c4r">as The Closer</i></div>
+            </div>
+          </div>
+          <div class="t1-rule"></div>
+          <div class="t1-billing-block">
+            <div><span class="k">Directed by</span><b data-t="t1_dir">The City Itself</b></div>
+            <div><span class="k">Date</span><b data-t="t1_date">Dec 31</b></div>
+            <div><span class="k">Curtain</span><b data-t="t1_time">9:00 PM</b></div>
+            <div><span class="k">Venue</span><b data-t="t1_venue">The Grand Hall</b></div>
+          </div>
+          <div class="t1-photo img" data-img="t1_photo">PLAYBILL</div>
+          <div class="t1-footer" data-t="t1_footer">One Night · One Icon · Tickets at the Door</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. BOARDING PASS ===== -->
+<section class="banner-wrap">
+  <div class="banner-meta">
+    <div>
+      <h2>12 · Boarding Pass</h2>
+      <p class="sub">Perforated · Flight info · Barcode strip</p>
+    </div>
+    <div class="meta-actions">
+      <button class="btn btn-edit-sm" onclick="openEditor('p1')">✏️ Edit</button>
+      <button class="btn btn-dl-sm" onclick="download('p1','boarding-pass')">⬇ PNG</button>
+    </div>
+  </div>
+  <div class="preview">
+    <div class="banner p1" id="p1">
+      <div class="p1-main">
+        <div class="p1-head">
+          <div class="p1-airline" data-p="p1_airline">✦ SKYLINE EVENTS</div>
+          <div class="p1-class" data-p="p1_class">VIP · FIRST CLASS</div>
+        </div>
+        <div class="p1-route">
+          <div class="p1-city">
+            <div class="p1-code" data-p="p1_from_code">LOS</div>
+            <div class="p1-city-name" data-p="p1_from">Lagos</div>
+          </div>
+          <div class="p1-plane">✈</div>
+          <div class="p1-city right">
+            <div class="p1-code" data-p="p1_to_code">GRH</div>
+            <div class="p1-city-name" data-p="p1_to">The Grand Hall</div>
+          </div>
+        </div>
+        <div class="p1-grid">
+          <div><span class="k">Passenger</span><b data-p="p1_passenger">MR. MIDNIGHT ICON</b></div>
+          <div><span class="k">Flight</span><b data-p="p1_flight">MGT 001</b></div>
+          <div><span class="k">Date</span><b data-p="p1_date">31 DEC 2025</b></div>
+          <div><span class="k">Boarding</span><b data-p="p1_boarding">8:30 PM</b></div>
+          <div><span class="k">Gate</span><b data-p="p1_gate">A12</b></div>
+          <div><span class="k">Seat</span><b data-p="p1_seat">1A</b></div>
+        </div>
+        <div class="p1-foot" data-p="p1_footer">Doors open 8:30 PM · Event starts 9:00 PM · No re-entry after 10:00 PM</div>
+      </div>
+      <div class="p1-perf"></div>
+      <div class="p1-stub">
+        <div class="p1-stub-label">BOARDING PASS</div>
+        <div class="p1-stub-code" data-p="p1_flight">MGT 001</div>
+        <div class="p1-stub-seat" data-p="p1_seat">1A</div>
+        <div class="p1-barcode"></div>
+        <div class="p1-stub-foot" data-p="p1_code">#MGT001-ICON</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
